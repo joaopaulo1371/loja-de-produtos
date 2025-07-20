@@ -1,12 +1,3 @@
-Copie o bloco abaixo e salve em C:\Projects\Vitrine de Produtos\backend\README.md. As novas seções sobre Docker foram adicionadas na seção "🛠️ Instalação".
-
-markdown
-
-Einklappen
-
-Zeilenumbruch
-
-Kopieren
 # Loja de Produtos - Back-end
 
 Bem-vindo ao back-end do projeto **Loja de Produtos**, uma API RESTful desenvolvida com Node.js/Express para suportar a vitrine de e-commerce. Esta API gerencia produtos e processa pedidos, integrando-se ao front-end (hospedado em outro repositório ou pasta `view`).
