@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "3000:3000"
+    environment:
+      - LUVINCO_API=https://luvinco.proxy.beeceptor.com
+      - LUVINCO_TOKEN=wQ8ehU2x4gj93CH9lMTnelQO3GcFvLzyqn8Fj3WA0ffQy57I60
+      - PORT=3000
+    volumes:
+      - ./backend:/app
+    command: ["node", "index.js"]

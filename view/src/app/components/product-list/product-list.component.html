@@ -1,0 +1,105 @@
+<section>
+  <header class="header-section">
+    <h1 class="store-title">Loja de Produtos</h1>
+  </header>
+
+  <div class="filter-section">
+    <div class="filter-controls">
+      <label for="category-filter">Categoria:</label>
+      <select id="category-filter" (change)="updateCategory($event)" class="filter-select">
+        <option value="">Todas</option>
+        <option *ngFor="let category of uniqueCategories" [value]="category">
+          {{ category }}
+        </option>
+      </select>
+
+      <label for="brand-filter">Marca:</label>
+      <select id="brand-filter" (change)="updateBrand($event)" class="filter-select">
+        <option value="">Todas</option>
+        <option *ngFor="let brand of uniqueBrands" [value]="brand">
+          {{ brand }}
+        </option>
+      </select>
+
+      <button (click)="applyFilters()" class="apply-btn">Aplicar</button>
+
+      <input
+        type="text"
+        id="search-bar"
+        placeholder="Pesquisar produtos..."
+        (input)="searchProducts($event)"
+        class="search-bar"
+      />
+    </div>
+  </div>
+
+  <div id="error-container" *ngIf="errorMessage">
+    <div class="error-message">{{ errorMessage }}</div>
+  </div>
+  <div id="main-container">
+    <div class="content-wrapper">
+      <div class="product-grid">
+        <div class="product-card" *ngFor="let product of displayedProducts">
+          <!-- <img [src]="product.image_url" alt="{{ product.name }}" class="product-image" (error)="onImageError($event, product)"> -->
+          <div class="product-details">
+            <h5 class="product-name">{{ product.name }}</h5>
+            <p class="product-description">
+              {{ product.description | slice : 0 : 50
+              }}{{ product.description.length > 50 ? "..." : "" }}
+            </p>
+            <p class="product-price">Preço: R$ {{ product.price }}</p>
+            <p class="product-brand">Marca: {{ product.brand }}</p>
+            <button
+              (click)="addToCart(product)"
+              [disabled]="product.stock === 0"
+              class="add-to-cart-btn {{
+                product.stock === 0 ? 'disabled' : ''
+              }}"
+            >
+              Adicionar ao Carrinho
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="cart-panel" *ngIf="cart.length">
+        <h2 class="cart-title">Carrinho</h2>
+        <ul class="cart-items">
+          <li class="cart-item" *ngFor="let item of cart">
+            <span
+              >{{ item.product.name }} - Quantidade: {{ item.quantity }}</span
+            >
+            <button (click)="removeFromCart(item.product)" class="remove-btn">
+              Remover
+            </button>
+          </li>
+        </ul>
+        <button
+          (click)="submitOrder()"
+          [disabled]="!cart.length"
+          class="submit-order-btn"
+        >
+          Enviar Pedido
+        </button>
+        <div class="order-message" *ngIf="orderMessage">{{ orderMessage }}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup-overlay" *ngIf="showSuccessPopup">
+    <div class="popup success-popup">
+      <h3>Pedido Enviado com Sucesso!</h3>
+      <p>Seu pedido foi processado com sucesso. Obrigado pela compra!</p>
+      <button (click)="closePopup('success')" class="popup-btn">Fechar</button>
+    </div>
+  </div>
+
+  <div class="popup-overlay" *ngIf="showErrorPopup">
+    <div class="popup error-popup">
+      <h3>Erro ao Enviar Pedido</h3>
+      <p>
+        Ocorreu um problema ao processar seu pedido. Tente novamente mais tarde.
+      </p>
+      <button (click)="closePopup('error')" class="popup-btn">Fechar</button>
+    </div>
+  </div>
+</section>
