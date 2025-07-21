@@ -46,7 +46,7 @@ O projeto foi criado para demonstrar habilidades em desenvolvimento full-stack, 
 
 ---
 
-## 🛠️ Instalação
+## 🛠️ Instalação Front-end
 
 ### 1. Configuração do Front-end
 1. Navegue até a pasta `view`:
@@ -60,7 +60,7 @@ npm install
 ### 2. Configuração do Back-end
 1. Navegue até a pasta `backend`:
 
-## 🛠️ Instalação
+## 🛠️ Instalação Back-end
 
 ### 1. Instalação Local
 1. Navegue até a pasta `backend`:
