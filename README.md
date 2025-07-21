@@ -41,47 +41,23 @@ O projeto foi criado para demonstrar habilidades em desenvolvimento de APIs com 
 1. Navegue até a pasta `backend`:
 cd C:\Projects\Vitrine de Produtos\backend
 
-Einklappen
 
-Zeilenumbruch
-
-Kopieren
 2. Instale as dependências:
 npm install
 
-Einklappen
-
-Zeilenumbruch
-
-Kopieren
 3. Configure as variáveis de ambiente:
 - Crie um arquivo `.env` na raiz do `backend` com as configurações necessárias (ex.: URL do banco, porta). Exemplo:
 PORT=3000
 DB_URL=mongodb://localhost:27017/loja
 
-Einklappen
-
-Zeilenumbruch
-
-Kopieren
 - Ajuste conforme sua configuração.
 
 4. Inicie o servidor:
 npm start
 
-Einklappen
-
-Zeilenumbruch
-
-Kopieren
 Ou, para desenvolvimento:
 npm run dev
 
-Einklappen
-
-Zeilenumbruch
-
-Kopieren
 (Ajuste o script no `package.json` se necessário.)
 
 5. A API estará disponível em `http://localhost:3000` (ajuste a porta conforme o `.env`).
@@ -94,51 +70,31 @@ Kopieren
 PORT=3000
 DB_URL=mongodb://mongo:27017/loja
 
-Einklappen
-
-Zeilenumbruch
-
-Kopieren
 - Ajuste conforme sua configuração e o serviço de banco de dados no Docker.
 
 3. Construa e inicie os containers:
 - Se você tem um `docker-compose.yml`, execute:
 docker-compose up --build
 
-Einklappen
 
-Zeilenumbruch
-
-Kopieren
 - Se usar apenas um `Dockerfile`, construa a imagem:
 docker build -t loja-de-produtos-backend .
 
-Einklappen
-
-Zeilenumbruch
-
-Kopieren
 E inicie o container:
 docker run -d -p 3000:3000 --env-file .env loja-de-produtos-backend
 
-Einklappen
 
-Zeilenumbruch
-
-Kopieren
 - Substitua `loja-de-produtos-backend` pelo nome da sua imagem, se diferente.
 
 4. Verifique os containers em execução:
 docker ps
 
-Einklappen
 
-Zeilenumbruch
-
-Kopieren
 5. A API estará disponível em `http://localhost:3000` (ajuste a porta conforme o mapeamento).
 
-### Observações sobre Docker
+---
+
+## Observações sobre Docker
 - Certifique-se de que o `Dockerfile` ou `docker-compose.yml` está na pasta `backend` e configurado corretamente (ex.: expõe a porta 3000, mapeia volumes se necessário).
 - Se usar um banco de dados como MongoDB, adicione-o ao `docker-compose.yml`. Exemplo básico:
 ```yaml
@@ -161,11 +117,6 @@ POST /api/orders - Cria um novo pedido.
 Body (exemplo):
 json
 
-Einklappen
-
-Zeilenumbruch
-
-Kopieren
 {
   "products": [
     { "id": 1, "quantity": 2 },
