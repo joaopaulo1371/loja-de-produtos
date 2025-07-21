@@ -1,39 +1,64 @@
-# Loja de Produtos - Back-end
+# Loja de Produtos
 
-Bem-vindo ao back-end do projeto **Loja de Produtos**, uma API RESTful desenvolvida com Node.js/Express para suportar a vitrine de e-commerce. Esta API gerencia produtos e processa pedidos, integrando-se ao front-end (hospedado em outro repositório ou pasta `view`).
+Bem-vindo ao projeto **Loja de Produtos**, uma aplicação full-stack que simula uma vitrine de e-commerce. O projeto é composto por um **front-end** (desenvolvido com Angular, na pasta `view`) e um **back-end** (uma API RESTful em Node.js/Express, na pasta `backend`), permitindo a gestão de produtos, filtros, carrinho de compras e pedidos, com uma interface moderna e responsiva.
 
 ---
 
 ## 📋 Sobre o Projeto
 
-O back-end da **Loja de Produtos** é responsável por:
-- Fornecer endpoints para listar produtos e criar pedidos.
-- Gerenciar a lógica de negócios e a persistência de dados (se aplicável).
-- Integrar-se ao front-end via requisições HTTP.
+A **Loja de Produtos** oferece:
+- **Front-end**: Vitrine de produtos com filtros interativos (categoria, marca e pesquisa), carrinho de compras e notificações via pop-ups.
+- **Back-end**: API RESTful para gerenciar produtos e processar pedidos.
+- Design moderno com gradientes, animações e responsividade para dispositivos móveis e desktops.
 
-O projeto foi criado para demonstrar habilidades em desenvolvimento de APIs com Node.js/Express, com foco em escalabilidade e manutenção.
+O projeto foi criado para demonstrar habilidades em desenvolvimento full-stack, utilizando Angular, Node.js/Express e Sass para estilização avançada.
 
 ---
 
 ## 🚀 Tecnologias Utilizadas
 
+### Front-end (pasta `view`)
+- **Framework**: Angular
+- **Linguagem**: TypeScript, HTML5, Sass
+- **Dependências**: Poppins (via Google Fonts)
+- **Ferramentas**: Node.js, npm, Angular CLI
+
+### Back-end (pasta `backend`)
 - **Framework**: Node.js/Express (ajuste se for diferente)
 - **Linguagem**: JavaScript
 - **Dependências**: `express`, `cors`, `body-parser` (ajuste conforme sua stack)
 - **Ferramentas**: Node.js, npm
 - **Banco de Dados** (opcional): [especifique, ex.: MongoDB, PostgreSQL]
-- **Containerização**: Docker
 
 ---
 
 ## 📦 Pré-requisitos
 
-- [Node.js](https://nodejs.org/) (versão 16.x ou superior) - para desenvolvimento local
+### Para o Front-end
+- [Node.js](https://nodejs.org/) (versão 16.x ou superior)
 - [npm](https://www.npmjs.com/) (geralmente incluído com Node.js)
-- [Docker](https://www.docker.com/get-started) e [Docker Compose](https://docs.docker.com/compose/install/) - para execução via container
+- [Angular CLI](https://angular.io/cli) (instale com `npm install -g @angular/cli`)
+
+### Para o Back-end
+- [Node.js](https://nodejs.org/) (versão 16.x ou superior)
+- [npm](https://www.npmjs.com/)
 - [Banco de Dados] (se aplicável, ex.: MongoDB, PostgreSQL) e cliente correspondente
 
 ---
+
+## 🛠️ Instalação
+
+### 1. Configuração do Front-end
+1. Navegue até a pasta `view`:
+
+2. Instale as dependências:
+npm install
+
+3. Inicie o projeto:
+ npm start/ ng serve
+
+### 2. Configuração do Back-end
+1. Navegue até a pasta `backend`:
 
 ## 🛠️ Instalação
 
