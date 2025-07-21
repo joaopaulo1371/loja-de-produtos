@@ -119,7 +119,7 @@ docker ps
 
 ---
 
-## Observações sobre Docker
+## 📋 Observações sobre Docker
 - Certifique-se de que o `Dockerfile` ou `docker-compose.yml` está na pasta `backend` e configurado corretamente (ex.: expõe a porta 3000, mapeia volumes se necessário).
 - Se usar um banco de dados como MongoDB, adicione-o ao `docker-compose.yml`. Exemplo básico:
 ```yaml
